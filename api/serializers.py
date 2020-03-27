@@ -7,10 +7,10 @@ from .models import Lobby, Moves
 class LobbySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Lobby
-        fields = ('id', 'url', 'PersonOne', 'PersonTwo', 'LobbyCode')
+        fields = ('id', 'url', 'session', 'playerOne', 'playerTwo', 'lobbyCode', 'moves')
 
 
 class MovesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Moves
-        fields = ('url', 'Location1', 'Location2')
+        fields = ('id', 'url', 'location1', 'location2')
