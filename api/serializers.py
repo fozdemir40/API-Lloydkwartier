@@ -4,13 +4,13 @@ from .models import Lobby, Moves
 
 # Serializers here
 
-class LobbySerializer(serializers.HyperlinkedModelSerializer):
+class LobbySerializer(serializers.ModelSerializer):
     class Meta:
         model = Lobby
-        fields = ('id', 'url', 'session', 'playerOne', 'playerTwo', 'lobbyCode', 'moves')
+        fields = ('id', 'session', 'playerOne', 'playerTwo', 'lobbyCode', 'moves')
 
 
-class MovesSerializer(serializers.HyperlinkedModelSerializer):
+class MovesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Moves
-        fields = ('id', 'url', 'location1', 'location2')
+        fields = ('id', 'location1', 'location2')
