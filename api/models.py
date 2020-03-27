@@ -16,7 +16,7 @@ class Lobby(models.Model):
     playerOne = models.CharField(max_length=50, default='0')
     playerTwo = models.CharField(max_length=50, default='0')
     lobbyCode = models.CharField(max_length=50, default='0')
-    moves = models.ForeignKey(Moves, on_delete=models.CASCADE)
+    moves = models.ForeignKey(Moves, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.session

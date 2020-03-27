@@ -7,5 +7,6 @@ router.register('lobby', views.LobbyView)
 router.register('moves', views.MovesView)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('bundle/', views.BundleView.as_view(), name="bundle"),
 ]
