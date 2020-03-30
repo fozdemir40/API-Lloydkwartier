@@ -2,7 +2,7 @@ from django.urls import path, include
 from . import views
 from rest_framework import routers
 
-router = routers.DefaultRouter()
+router = views.MyRouter()
 router.register('lobby', views.LobbyView)
 router.register('moves', views.MovesView)
 
