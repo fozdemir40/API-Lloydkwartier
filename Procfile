@@ -1,1 +1,1 @@
-web: gunicorn API-Lloydkwatier.wsgi
+web: gunicorn API-Lloydkwartier.wsgi
