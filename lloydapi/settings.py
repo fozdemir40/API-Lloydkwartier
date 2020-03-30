@@ -20,12 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1afy#3r-qh-#)zr&4&8=u8zkcqb@5%&#j696q!y#*!-$=bm(a7'
+# SECRET_KEY = '1afy#3r-qh-#)zr&4&8=u8zkcqb@5%&#j696q!y#*!-$=bm(a7'
+SECRET_KEY = os.environ.get('lloydapi_secret')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lloydkwartierapi.herokuapp.com']
 
 # Application definition
 
